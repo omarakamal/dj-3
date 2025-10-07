@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omar's Class</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    
+</head>
+<body>
+    
+    <div class="App">
+        <h1>Omar's Class API Documentation</h1>
+        <br>
+        <br>
+        <h2> <a href="/students">Link to API</a></h2>
+        <br>
+        <h2>Endpoints:</h2>
+        <table>
+            <tr>
+                <th>Endpoints</th>
+                <th>HTTP Method</th>
+                <th>Response Data Type</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>/students</td>
+                <td>GET</td>
+                <td>[]</td>
+                <td>This endpoint returns an array of all the students stored within the API</td>
+            </tr>
+            <tr>
+                <td>/students/:id</td>
+                <td>GET</td>
+                <td>{}</td>
+                <td>This endpoint returns Object representing only 1 student</td>
+            </tr>
+            <tr>
+                <td>/students</td>
+                <td>POST</td>
+                <td>{}</td>
+                <td>This endpoint is used to create a new student. It will return an object representing the new student that was created</td>
+            </tr>
+            <tr>
+                <td>/students/:id</td>
+                <td>PUT</td>
+                <td>{}</td>
+                <td>This endpoint is used for updating an already exisiting student. The id in the param will represent the id of the student we want to update the value of</td>
+            </tr>
+            <tr>
+                <td>/students/:id</td>
+                <td>DELETE</td>
+                <td>{}</td>
+                <td>This endpoint is used for deleting an exisiting students data. it returns an empty object</td>
+            </tr>
+
+        </table>
+    </div>
+</body>
+</html>
